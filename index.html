@@ -9,100 +9,32 @@
   </head>
   <body>
     <a-scene>
-      <a-assets-item
-        id="sign"
-        src="assets/Sign.glb"
-        >
-        <a-assets-item
-        id="club"
-        src="assets/Golf_Club.glb"
-        >
-      <a-assets-item
-        id="golfcart"
-        src="assets/Golf_cart.glb"
-        >
-      </a-assets-item>
-      <a-assets-item
-        id="ball"
-        src="assets/Golf_ball.glb"
-        >
-      </a-assets-item>
-      <a-assets-item
-        id="bench"
-        src="assets/Bench.glb"
-        >
-      </a-assets-item>
-      <a-assets-item
-        id="Small_Building"
-        src="assets/Small_Building.glb"
-        >
-      </a-assets-item>
-      <a-assets-item
-        id="Flag"
-        src="assets/Flag.glb"
-        >
-      </a-assets-item>
       <a-assets>
-        <img
-            id="sky"
-            src="assets\Sky.jpg"
-      >
-       <img
-    id="grass-base"
-    src="assets\Grass_005_BaseColor.jpg"
->
-    <img
-    id="grass-ambient-occlusion"
-    src="assets\Grass_005_AmbientOcclusion.jpg"
->
-    <img
-    id="grass-normal"
-    src="assets\Grass_005_Normal.jpg"
->
-<img
-    id="wall-base"
-    src="assets\Wall_Stone_018_basecolor.jpg"
->
-    <img
-    id="wall-ambient-occlusion"
-    src="assets\Wall_Stone_018_ambientOcclusion.jpg"
->
-    <img
-    id="wall-normal"
-    src="assets\Wall_Stone_018_normal.jpg"
->
-    <img
-    id="hedge-base"
-    src="assets\Hedge_001_BaseColor.jpg"
->
-    <img
-    id="hedge-ambient-occlusion"
-    src="assets\Hedge_001_AmbientOcclusion.jpg"
->
-    <img
-    id="hedge-normal"
-    src="assets\Hedge_001_Normal.jpg"
->
-
+        <a-asset-item id="sign" src="assets/Sign.glb"></a-asset-item>
+        <a-asset-item id="club" src="assets/Golf_Club.glb"></a-asset-item>
+        <a-asset-item id="golfcart" src="assets/Golf_cart.glb"></a-asset-item>
+        <a-asset-item id="ball" src="assets/Golf_ball.glb"></a-asset-item>
+        <a-asset-item id="bench" src="assets/Bench.glb"></a-asset-item>
+        <a-asset-item id="Small_Building" src="assets/Small_Building.glb"></a-asset-item>
+        <a-asset-item id="Flag" src="assets/Flag.glb"></a-asset-item>
+        <img id="sky" src="assets/Sky.jpg">
+        <img id="grass-base" src="assets/Grass_005_BaseColor.jpg">
+        <img id="grass-ambient-occlusion" src="assets/Grass_005_AmbientOcclusion.jpg">
+        <img id="grass-normal" src="assets/Grass_005_Normal.jpg">
+        <img id="wall-base" src="assets/Wall_Stone_018_basecolor.jpg">
+        <img id="wall-ambient-occlusion" src="assets/Wall_Stone_018_ambientOcclusion.jpg">
+        <img id="wall-normal" src="assets/Wall_Stone_018_normal.jpg">
+        <img id="hedge-base" src="assets/Hedge_001_BaseColor.jpg">
+        <img id="hedge-ambient-occlusion" src="assets/Hedge_001_AmbientOcclusion.jpg">
+        <img id="hedge-normal" src="assets/Hedge_001_Normal.jpg">
       </a-assets>
       <!-- Camera -->
-       <a-sky
-          src="#sky"
-        >
-      </a-sky>
+      <a-sky src="#sky"></a-sky>
       <a-entity camera look-controls wasd-controls position="0 1.6 20"></a-entity>
 
-
       <!-- Sky + Ground -->
-      
       <a-plane
-         material=
-        "src: #grass-base;
-        repeat: 500 500;
-        ambientOcclusionMap: #grass-ambient-occlusion;
-        ambientOcclusionTextureRepeat: 500 500;
-        normalMap: #grass-normal;
-        normalTextureRepeat: 500 500" 
+         material="src: #grass-base; repeat: 500 500; ambientOcclusionMap: #grass-ambient-occlusion; ambientOcclusionTextureRepeat: 500 500; normalMap: #grass-normal; normalTextureRepeat: 500 500" 
          rotation="-90 0 0" 
          width="200"
          height="200" 
@@ -113,18 +45,12 @@
 
       <!-- Path -->
       <a-box 
-      material=
-        "src: #wall-base;
-        repeat: 3 5;
-        ambientOcclusionMap: #wall-ambient-occlusion;
-        ambientOcclusionTextureRepeat: 3 5;
-        normalMap: #wall-normal;
-        normalTextureRepeat: 3 5"
-      width="3"
-       height="0.05"
+        material="src: #wall-base; repeat: 3 5; ambientOcclusionMap: #wall-ambient-occlusion; ambientOcclusionTextureRepeat: 3 5; normalMap: #wall-normal; normalTextureRepeat: 3 5"
+        width="3"
+        height="0.05"
         depth="20"
-         position="0 0 10"
-          static-body></a-box>
+        position="0 0 10"
+        static-body></a-box>
 
       <!-- Hole -->
       <a-cylinder color="#000" radius="0.25" height="0.05" position="0 0.05 -3" static-body></a-cylinder>
@@ -152,88 +78,28 @@
 
       <!-- Bushes -->
       <a-sphere 
-      material =
-            "src: #hedge-base;
-            repeat: 3 5;
-            ambientOcclusionMap: #hedge-ambient-occlusion;
-            ambientOcclusionTextureRepeat: 3 5;
-            normalMap: #hedge-normal;
-            normalTextureRepeat: 3 5" 
-      radius="0.6"
-       position="-4 0.6 6" 
-       static-body>
-      </a-sphere>
+        material="src: #hedge-base; repeat: 3 5; ambientOcclusionMap: #hedge-ambient-occlusion; ambientOcclusionTextureRepeat: 3 5; normalMap: #hedge-normal; normalTextureRepeat: 3 5" 
+        radius="0.6"
+        position="-4 0.6 6" 
+        static-body></a-sphere>
       <a-sphere 
-      material =
-            "src: #hedge-base;
-            repeat: 3 5;
-            ambientOcclusionMap: #hedge-ambient-occlusion;
-            ambientOcclusionTextureRepeat: 3 5;
-            normalMap: #hedge-normal;
-            normalTextureRepeat: 3 5"
-       radius="0.5"
+        material="src: #hedge-base; repeat: 3 5; ambientOcclusionMap: #hedge-ambient-occlusion; ambientOcclusionTextureRepeat: 3 5; normalMap: #hedge-normal; normalTextureRepeat: 3 5"
+        radius="0.5"
         position="5 0.5 8"
-         static-body>
-        </a-sphere>
+        static-body></a-sphere>
       <a-sphere 
-        material =
-            "src: #hedge-base;
-            repeat: 3 5;
-            ambientOcclusionMap: #hedge-ambient-occlusion;
-            ambientOcclusionTextureRepeat: 3 5;
-            normalMap: #hedge-normal;
-            normalTextureRepeat: 3 5"
-       radius="0.7"
+        material="src: #hedge-base; repeat: 3 5; ambientOcclusionMap: #hedge-ambient-occlusion; ambientOcclusionTextureRepeat: 3 5; normalMap: #hedge-normal; normalTextureRepeat: 3 5"
+        radius="0.7"
         position="-7 0.7 -5"
-         static-body>
-        </a-sphere>
+        static-body></a-sphere>
 
-      
-
-      <a-entity
-      gltf-model="#bench"
-      position="-6 0.6 4"
-      rotation="0 90 0"
-      scale="0.007 0.007 0.007"
-      >
-      <a-entity
-        gltf-model="#Small_Building"
-        position="-2000 -100 2000"
-        rotation="0 0 0"
-        scale="1000 1000 1000"
-        >
-      <a-entity
-        gltf-model="#golfcart"
-        position="0 .15 -1.5"
-        rotation="0 180 0"
-        scale=".2 .2 .2"
-        >
-        <a-entity
-        gltf-model="#ball"
-        position="-2000 -100 2000"
-        rotation="0 0 0"
-        scale="1000 1000 1000"
-        >
-        <a-entity
-      gltf-model="#bench"
-      position="-6 0.6 4"
-      rotation="0 90 0"
-    scale="0.007 0.007 0.007"
-      >
-      <a-entity
-        gltf-model="#sign"
-        position="4 0.5 4"
-        rotation="0 45 0"
-        scale="0.5 0.5 0.5"
-        >
-      <a-entity
-        gltf-model="#club"
-        position="0 .1 4"
-        rotation="0 90 0"
-        scale="0.02 0.02 0.02"
-        >
-
-</a-entity>
+      <!-- Models -->
+      <a-entity gltf-model="#bench" position="-6 0.6 4" rotation="0 90 0" scale="0.007 0.007 0.007"></a-entity>
+      <a-entity gltf-model="#Small_Building" position="0 0 -20" rotation="0 180 0" scale="10 10 10"></a-entity>
+      <a-entity gltf-model="#golfcart" position="-5 1.4 17" rotation="0 270 0" scale="1.8 1.8 1.8"></a-entity>
+      <a-entity gltf-model="#ball" position="-2000 -100 2000" rotation="0 0 0" scale="1000 1000 1000"></a-entity>
+      <a-entity gltf-model="#sign" position="5 0 17" rotation="0 -45 0"scale="1 1 1"></a-entity>
+      <a-entity gltf-model="#club" position="-5.6 .2 3" rotation="0 90 0" scale="1 1 1"></a-entity>
     </a-scene>
   </body>
 </html>
