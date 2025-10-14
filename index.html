@@ -27,6 +27,9 @@
         <img id="hedge-base" src="assets/Hedge_001_BaseColor.jpg">
         <img id="hedge-ambient-occlusion" src="assets/Hedge_001_AmbientOcclusion.jpg">
         <img id="hedge-normal" src="assets/Hedge_001_Normal.jpg">
+        <img id="green-base" src="assets/Grass_001_COLOR.jpg">
+        <img id="green-normal" src="assets/Grass_001_NORM.jpg">
+        <img id="green-ambient-occlusion" src="assets/Grass_001_OCC.jpg">
       </a-assets>
       <!-- Camera -->
       <a-sky src="#sky"></a-sky>
@@ -41,7 +44,11 @@
          static-body></a-plane>
 
       <!-- Putting green -->
-      <a-cylinder color="#2ea02e" radius="10" height="0.1" position="0 0 0" static-body></a-cylinder>
+      <a-cylinder material="src: #green-base; repeat: 250 250; ambientOcclusionMap: #green-ambient-occlusion; ambientOcclusionTextureRepeat: 250 250; normalMap: #green-normal; normalTextureRepeat: 250 250"
+       radius="10" 
+       height="0.1" 
+       position="0 0 0" 
+       static-body></a-cylinder>
 
       <!-- Path -->
       <a-box 
@@ -62,20 +69,7 @@
 
       <!-- Golf ball (on green) -->
       <a-sphere id="ball" color="#fff" radius="0.045" position="0 .2 5" dynamic-body></a-sphere>
-
-      <!-- Benches -->
-      <a-box color="#8b5a2b" width="2" height="0.2" depth="0.6" position="6 0.2 -4" static-body></a-box>
-
-      <!-- Trees -->
-      <a-cylinder color="#6b4a2f" radius="0.2" height="2" position="-10 1 -8" static-body></a-cylinder>
-      <a-cone color="#1f7a1f" radius-bottom="1.5" radius-top="0.01" height="3" position="-10 2.5 -8" static-body></a-cone>
-
-      <a-cylinder color="#6b4a2f" radius="0.2" height="2" position="12 1 6" static-body></a-cylinder>
-      <a-cone color="#228b22" radius-bottom="1.5" radius-top="0.01" height="3" position="12 2.5 6" static-body></a-cone>
-
-      <a-cylinder color="#6b4a2f" radius="0.2" height="2" position="8 1 -10" static-body></a-cylinder>
-      <a-cone color="#2e8b57" radius-bottom="1.5" radius-top="0.01" height="3" position="8 2.5 -10" static-body></a-cone>
-
+      
       <!-- Bushes -->
       <a-sphere 
         material="src: #hedge-base; repeat: 3 5; ambientOcclusionMap: #hedge-ambient-occlusion; ambientOcclusionTextureRepeat: 3 5; normalMap: #hedge-normal; normalTextureRepeat: 3 5" 
